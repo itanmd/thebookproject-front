@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+import { BrowserRouter } from 'react-router-dom';
 
 axios.defaults.baseURL = `${process.env.REACT_APP_DOMAIN}/api` ;
 axios.interceptors.request.use((config)=>{
@@ -20,7 +23,9 @@ axios.interceptors.request.use((config)=>{
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

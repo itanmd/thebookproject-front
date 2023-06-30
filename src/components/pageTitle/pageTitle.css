@@ -1,0 +1,45 @@
+.bg-img {
+  height: 75vh;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/51b78582e4b09028821c7c1a/1371670116929-TFUALI9XHK8DYJJJFRQQ/_DSF5648-1500.jpg");
+  background-size: cover;
+  background-position: 100% 10%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: clip;
+}
+
+.custom-heading {
+  z-index: 10;
+  padding: 0.8rem;
+  background-color: black;
+}
+.custom-heading h1 {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.873);
+  letter-spacing: 0.8rem;
+  word-spacing: 6px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media only screen and (max-width: 1750px) {
+  .bg-img {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .bg-img {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .custom-heading {
+    display: none;
+  }
+  .bg-img {
+    background-position: 100% 0%;
+  }
+}
