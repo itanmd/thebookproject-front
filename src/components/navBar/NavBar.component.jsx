@@ -10,7 +10,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 const NavBar = () => {
   const location = useLocation();
   const loggedIn = useSelector((state) => state.customer.loggedIn);
-  // const adminLoggedIn = useSelector((state) => state.auth.loggedIn);
+  const adminLoggedIn = useSelector((state) => state.auth.loggedIn);
   useEffect(() => {
     if (
       window.innerWidth < 990 &&
@@ -74,13 +74,13 @@ const NavBar = () => {
                   <GoogleLogIn />
                 </li>
               )}
-              {/* {adminLoggedIn && (
+              {adminLoggedIn && (
                 <li className="nav-item">
                   <NavLink className="nav-link" to={"/admin"}>
                     <FontAwesomeIcon icon={faUser} /> admin
                   </NavLink>
                 </li>
-              )} */}
+              )}
             </ul>
           </div>
         </div>
