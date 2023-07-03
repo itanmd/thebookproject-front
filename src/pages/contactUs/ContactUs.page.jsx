@@ -1,6 +1,6 @@
 import "./contuctUs.css";
 import { Fragment } from "react";
-// import ContuctUsForm from "../../components/contuctUsForm/ContuctUsForm.component";
+import ContactUsForm from "../../components/contuctUsForm/ContuctUsForm.component";
 import PageTitle from "../../components/pageTitle/pageTitle.component";
 
 const ContactUs = () => {
@@ -8,8 +8,8 @@ const ContactUs = () => {
     <Fragment>
       <PageTitle title="CONTACT US" />
       <div className="container mt-4">
-        {/* <ContuctUsForm /> */}
-        </div>
+        <ContactUsForm />
+      </div>
     </Fragment>
   );
 };
