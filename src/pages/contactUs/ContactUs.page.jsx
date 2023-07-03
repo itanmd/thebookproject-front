@@ -1,6 +1,6 @@
 import "./contuctUs.css";
 import { Fragment } from "react";
-import ContactUsForm from "../../components/contuctUsForm/ContuctUsForm.component";
+import ContactUsForm from "../../components/contactUsForm/ContactUsForm.component";
 import PageTitle from "../../components/pageTitle/pageTitle.component";
 
 const ContactUs = () => {
