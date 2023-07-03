@@ -4,9 +4,10 @@ nav .nav-link {
 }
 .navbar {
   background-color: black;
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: 1.2px;
   justify-content: flex-end;
+  text-transform: uppercase;
 }
 #navbarNav {
   flex-direction: row-reverse;
@@ -16,6 +17,12 @@ nav .nav-link {
 }
 .header1 {
   display: none;
+}
+.header {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 990px) {
   .nav-link:hover {

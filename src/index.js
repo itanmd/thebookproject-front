@@ -7,6 +7,8 @@ import axios from 'axios';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 axios.defaults.baseURL = `${process.env.REACT_APP_DOMAIN}/api` ;
 axios.interceptors.request.use((config)=>{
@@ -23,9 +25,11 @@ axios.interceptors.request.use((config)=>{
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
         <App />
-    </BrowserRouter>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

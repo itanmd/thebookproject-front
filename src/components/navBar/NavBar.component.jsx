@@ -8,26 +8,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  //   const location = useLocation();
-  //   const loggedIn = useSelector((state) => state.customer.loggedIn);
-  //   const adminLoggedIn = useSelector((state) => state.auth.loggedIn);
-  //   useEffect(() => {
-  //     if (
-  //       window.innerWidth < 990 &&
-  //       document.getElementById("navbarNav") &&
-  //       document.getElementById("navbarNav").className.includes("show")
-  //     ) {
-  //       document.getElementById("navbar-button").click();
-  //     }
-  //   }, [location]);
+  const location = useLocation();
+  const loggedIn = useSelector((state) => state.customer.loggedIn);
+  // const adminLoggedIn = useSelector((state) => state.auth.loggedIn);
+  useEffect(() => {
+    if (
+      window.innerWidth < 990 &&
+      document.getElementById("navbarNav") &&
+      document.getElementById("navbarNav").className.includes("show")
+    ) {
+      document.getElementById("navbar-button").click();
+    }
+  }, [location]);
 
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <div className="container-fluid custom-nav-container">
-          <Link className="navbar-brand" to="/">
-            <h1 className="header m-0">TBP</h1>
-            <h1 className="header1 m-0">The Book Project</h1>
+          <Link className="navbar-brand" to="/home">
+            <h1 className="header m-0">THE BOOK PROJECT</h1>
+            <h1 className="header1 m-0">THE BOOK PROJECT</h1>
           </Link>
           <button
             className="navbar-toggler py-2"
@@ -63,24 +63,24 @@ const NavBar = () => {
                   Contact Us
                 </NavLink>
               </li>
-              {/* {loggedIn ? (
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to={encodeURI("/מועדפים")}>
-                      מועדפים
-                    </NavLink>
-                  </li>
-                ) : (
-                  <li className="nav-item">
-                    <GoogleLogIn />
-                  </li>
-                )}
-                {adminLoggedIn && (
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to={"/admin"}>
-                      <FontAwesomeIcon icon={faUser} /> מנהל
-                    </NavLink>
-                  </li>
-                )} */}
+              {loggedIn ? (
+                <li className="nav-item">
+                  <NavLink className="nav-link" to={encodeURI("/favorites")}>
+                    favorites
+                  </NavLink>
+                </li>
+              ) : (
+                <li className="nav-item">
+                  <GoogleLogIn />
+                </li>
+              )}
+              {/* {adminLoggedIn && (
+                <li className="nav-item">
+                  <NavLink className="nav-link" to={"/admin"}>
+                    <FontAwesomeIcon icon={faUser} /> admin
+                  </NavLink>
+                </li>
+              )} */}
             </ul>
           </div>
         </div>

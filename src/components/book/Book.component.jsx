@@ -1,7 +1,7 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment } from "react";
-import "./book.css"
+import "./book.css";
 
 const Book = ({
   name,
@@ -17,18 +17,17 @@ const Book = ({
   onOpenProduct,
   favorite,
 }) => {
+  //  const handleClick = () => {
+  //    onOpenProduct(idbooks);
+  //  };
 
-    //  const handleClick = () => {
-    //    onOpenProduct(idbooks);
-    //  };
-
-    //  const handleFavor = () => {
-    //    if (favorite) {
-    //      onUnsetFavor(idbooks);
-    //    } else {
-    //      onSetFavor(idbooks);
-    //    }
-    //  };
+  //  const handleFavor = () => {
+  //    if (favorite) {
+  //      onUnsetFavor(idbooks);
+  //    } else {
+  //      onSetFavor(idbooks);
+  //    }
+  //  };
   return (
     <Fragment>
       <div className="card">
@@ -73,4 +72,4 @@ const Book = ({
   );
 };
 
-export default Book; 
+export default Book;
