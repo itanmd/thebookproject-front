@@ -6,8 +6,10 @@ import "./App.css";
 // import axios from "axios";
 import Home from "./pages/home/Home.page";
 import NavBar from "./components/navBar/NavBar.component";
+import Favorites from "./pages/favorites/Favorites.page";
 import AboutUs from "./pages/aboutUs/AboutUs.page";
 import Book from "./pages/book/Book.page";
+import OurBooksPage from "./pages/ourBooks/OurBooks.page";
 import ContactUs from "./pages/contactUs/ContactUs.page";
 import CreateAdmin from "./pages/createAdmin/CreateAdmin.page";
 import Admin from "./pages/admin/Admin.page";
@@ -19,6 +21,7 @@ import AdminAutoLogIn from "./components/adminAutoLogIn/AdminAutoLogIn.component
 import AdminEditOrCreateBook from "./components/adminEditOrCreateBook/AdminEditOrCreateBook.component";
 
 import PageNotFount from "./pages/404/404.page";
+import OurBooks from "./components/ourBooks/OurBooks.component";
 
 function App() {
   return (
@@ -31,7 +34,9 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Home" element={<Home />} />
           <Route exact path="/book/:id" element={<Book />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route exact path="/About Us" element={<AboutUs />} />
+          <Route exact path="/Our Books" element={<OurBooksPage />} />
           <Route exact path="/Contact Us" element={<ContactUs />} />
           <Route path="/create-admin" element={<CreateAdmin />} />;
           <Route exact path="/admin" element={<Admin />} />

@@ -17,17 +17,17 @@ const Book = ({
   onOpenProduct,
   favorite,
 }) => {
-  //  const handleClick = () => {
-  //    onOpenProduct(idbooks);
-  //  };
+  const handleClick = () => {
+    onOpenProduct(idbooks);
+  };
 
-  //  const handleFavor = () => {
-  //    if (favorite) {
-  //      onUnsetFavor(idbooks);
-  //    } else {
-  //      onSetFavor(idbooks);
-  //    }
-  //  };
+  const handleFavor = () => {
+    if (favorite) {
+      onUnsetFavor(idbooks);
+    } else {
+      onSetFavor(idbooks);
+    }
+  };
   return (
     <Fragment>
       <div className="card">
@@ -52,7 +52,7 @@ const Book = ({
             </div>
             <div className="card-footer text-start">
               <button
-                // onClick={handleClick}
+                onClick={handleClick}
                 className="btn btn-outline-warning d-inline text-white"
               >
                 More details
@@ -62,7 +62,7 @@ const Book = ({
                 className={`pointer  me-1 ${
                   favorite ? "text-warning" : "text-secondary"
                 }`}
-                // onClick={handleFavor}
+                onClick={handleFavor}
               />
             </div>
           </div>

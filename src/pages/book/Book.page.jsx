@@ -87,7 +87,6 @@ const Book = () => {
               <div className="col text-light">
                 <div className="custom-product">
                   <div>
-                    {/* <div className="fw-bold">{data.short_description}</div> */}
                     <div>{data.description}</div>
                   </div>
                   <div className="fw-bold"> Price: {data.price}$</div>
