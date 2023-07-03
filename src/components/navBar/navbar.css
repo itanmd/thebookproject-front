@@ -4,8 +4,8 @@ nav .nav-link {
 }
 .navbar {
   background-color: black;
-  font-size: 2rem;
-  letter-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 1px;
   justify-content: flex-end;
 }
 #navbarNav {
