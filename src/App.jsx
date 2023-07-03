@@ -7,7 +7,7 @@ import "./App.css";
 import Home from "./pages/home/Home.page";
 import NavBar from "./components/navBar/NavBar.component";
 import AboutUs from "./pages/aboutUs/AboutUs.page";
-import BookPage from "./pages/book/Book.page";
+import Book from "./pages/book/Book.page";
 import ContactUs from "./pages/contactUs/ContactUs.page";
 import CreateAdmin from "./pages/createAdmin/CreateAdmin.page";
 import Admin from "./pages/admin/Admin.page";
@@ -16,6 +16,8 @@ import DashboardNavBar from "./pages/dashboard/Dashboard.page";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword.page";
 import RecoveryPassword from "./pages/recoveryPassword/RecoveryPassword.page";
 import AdminAutoLogIn from "./components/adminAutoLogIn/AdminAutoLogIn.component";
+import AdminEditOrCreateBook from "./components/adminEditOrCreateBook/AdminEditOrCreateBook.component";
+
 import PageNotFount from "./pages/404/404.page";
 
 function App() {
@@ -28,8 +30,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Home" element={<Home />} />
+          <Route exact path="/book/:id" element={<Book />} />
           <Route exact path="/About Us" element={<AboutUs />} />
-          <Route exact path="/Our Books" element={<BookPage />} />
           <Route exact path="/Contact Us" element={<ContactUs />} />
           <Route path="/create-admin" element={<CreateAdmin />} />;
           <Route exact path="/admin" element={<Admin />} />
@@ -41,6 +43,62 @@ function App() {
           />
           <Route
             path="/admin/dashboard"
+            element={
+              <AuthGuard>
+                <DashboardNavBar />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/dashboard/leads"
+            element={
+              <AuthGuard>
+                <DashboardNavBar />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/dashboard/books"
+            element={
+              <AuthGuard>
+                <DashboardNavBar />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/dashboard/messages"
+            element={
+              <AuthGuard>
+                <DashboardNavBar />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/edit/:id"
+            element={
+              <AuthGuard>
+                <AdminEditOrCreateBook />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/add"
+            element={
+              <AuthGuard>
+                <AdminEditOrCreateBook />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/book/:id"
+            element={
+              <AuthGuard>
+                <Book />
+              </AuthGuard>
+            }
+          />
+          <Route
+            path="/admin/dashboard/private-details"
             element={
               <AuthGuard>
                 <DashboardNavBar />

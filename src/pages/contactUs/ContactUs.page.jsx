@@ -1,4 +1,4 @@
-import "./contuctUs.css";
+import "./contactUs.css";
 import { Fragment } from "react";
 import ContactUsForm from "../../components/contactUsForm/ContactUsForm.component";
 import PageTitle from "../../components/pageTitle/pageTitle.component";
