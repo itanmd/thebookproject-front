@@ -19,9 +19,8 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword.page";
 import RecoveryPassword from "./pages/recoveryPassword/RecoveryPassword.page";
 import AdminAutoLogIn from "./components/adminAutoLogIn/AdminAutoLogIn.component";
 import AdminEditOrCreateBook from "./components/adminEditOrCreateBook/AdminEditOrCreateBook.component";
-
+import Footer from "./components/footer/Footer.component";
 import PageNotFount from "./pages/404/404.page";
-import OurBooks from "./components/ourBooks/OurBooks.component";
 
 function App() {
   return (
@@ -32,7 +31,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/Home" element={<Home />} />
+          <Route exact path="/home" element={<Home />} />
           <Route exact path="/book/:id" element={<Book />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route exact path="/About Us" element={<AboutUs />} />
@@ -113,6 +112,7 @@ function App() {
           <Route path="/404" element={<PageNotFount />} />
         </Routes>
       </div>
+      <Footer />
     </Fragment>
   );
 }

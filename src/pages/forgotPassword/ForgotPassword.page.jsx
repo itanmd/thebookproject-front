@@ -28,7 +28,6 @@ const ForgotPassword = () => {
           toast.success(
             "A password reset message was sent to your email address"
           );
-          console.log("success");
         });
     }
   };

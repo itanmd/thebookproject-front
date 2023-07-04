@@ -18,6 +18,7 @@ const AdminEditOrCreateBook = () => {
       axios
         .get(`/books/${params.id}`)
         .then(({ data }) => {
+          console.log(data)
           setAxiosData(data[0]);
           setData({
             name: data[0].name,
@@ -26,6 +27,7 @@ const AdminEditOrCreateBook = () => {
             uuid: data[0].uuid,
             pages: data[0].pages,
             categoryId: data[0].categoryId,
+
           });
         })
         .catch((e) => {
@@ -68,9 +70,10 @@ const AdminEditOrCreateBook = () => {
       abortEarly: false,
     });
     if (validatedValue.error) {
+      console.log(validatedValue)
       toast.error("One of the values is invalid");
     } else {
-      if (!params.hasOwnProperty("id") && !axiosData.img_link) {
+      if (!params.hasOwnProperty("id") && !axiosData.image_link) {
         toast.error("Please add an image");
       } else {
         const formData = new FormData();

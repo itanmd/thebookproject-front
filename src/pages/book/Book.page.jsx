@@ -13,7 +13,6 @@ import { toast } from "react-toastify";
 import { customerActions } from "../../store/customer";
 import GoBackButton from "../../components/goBackButoon/GoBackButton.component";
 
-
 const Book = () => {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.customer.customerData);
@@ -49,9 +48,7 @@ const Book = () => {
       if (loggedIn) {
         if (favorites.find((fav) => fav.idbook === data.idbooks)) {
           setFav("text-secondary");
-          let favor = favorites.filter(
-            (fav) => fav.idbook !== data.idbooks
-          );
+          let favor = favorites.filter((fav) => fav.idbook !== data.idbooks);
           dispatch(customerActions.updateCustomerData(favor));
 
           axios

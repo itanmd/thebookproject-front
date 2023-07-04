@@ -22,7 +22,7 @@ const DashboardNavBar = () => {
   const handleLogOut = () => {
     localStorage.removeItem("admin-token");
     dispatch(authActions.logout());
-    navigate("/Home");
+    navigate("/home");
   };
   useEffect(() => {
     axios
@@ -70,7 +70,7 @@ const DashboardNavBar = () => {
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/">
-              HomePage
+              homePage
             </NavLink>
           </li>
           <button
