@@ -12,7 +12,7 @@ const OurBooksPage = () => {
   };
   return (
     <Fragment>
-      <PageTitle title="Our Books" />
+      <PageTitle title="OUR BOOKS" />
       <div className="container mt-3">
         <div className="col-12 col-md-8 row row-cols-1 row-cols-md-2 g-3 mb-3">
           <div className="col">

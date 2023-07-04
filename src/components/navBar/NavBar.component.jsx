@@ -24,11 +24,10 @@ const NavBar = () => {
   return (
     <Fragment>
       {!location.pathname.includes("admin") && (
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container-fluid custom-nav-container">
             <Link className="navbar-brand" to="/home">
-              <h1 className="header m-0">THE BOOK PROJECT</h1>
-              <h1 className="header1 m-0">THE BOOK PROJECT</h1>
+              <h1 className="m-0">THE BOOK PROJECT</h1>
             </Link>
             <button
               className="navbar-toggler py-2"
