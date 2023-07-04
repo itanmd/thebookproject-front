@@ -34,33 +34,9 @@
 }
 @media only screen and (max-width: 600px) {
   .custom-heading h1 {
-    font-size: 4rem;
-  }
-}
-
-@media only screen and (max-width: 2000px) {
-  .bg-img {
-    height: 60vh;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .bg-img {
-    height: 50vh;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .custom-heading {
-    display: none;
+    font-size: 1.5rem;
   }
   .bg-img {
-    background-position: 100% 0%;
-    height: 40vh;
-  }
-}
-@media only screen and (max-width: 442px) {
-  .bg-img {
-    background-position: 100% 0%;
-    height: 25vh;
+    height: 30vh;
   }
 }
