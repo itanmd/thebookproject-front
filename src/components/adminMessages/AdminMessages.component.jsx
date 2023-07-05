@@ -71,6 +71,8 @@ const AdminMessages = ({ onMessageRead }) => {
                 <th scope="col">Email</th>
                 <th scope="col">Phone number</th>
                 <th scope="col">Subject</th>
+                <th>Action</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>

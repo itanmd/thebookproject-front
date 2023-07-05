@@ -58,12 +58,12 @@ const AdminBooks = () => {
     <Fragment>
       <h1 className="text-center">Books</h1>
       <div className="container">
-        <button className="btn btn-outline-warning" onClick={addBook}>
+        <button className="btn btn-warning" onClick={addBook}>
           Add book <span className="fw-bold">+</span>
         </button>
         <div className="mt-4">
           {data[0] ? (
-            <div className="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-3">
+            <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3">
               {data &&
                 data.map((prod, idx) => (
                   <div className="col" key={idx}>

@@ -6,8 +6,9 @@ const AdminBook = ({
   idbooks,
   name,
   price,
+  pages,
   image_link,
-  description,
+  uuid,
   onEdit,
   onDelete,
   onOpenBook,
@@ -32,8 +33,9 @@ const AdminBook = ({
           alt={name}
         />
         <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <p className="card-text">{description}</p>
+          <h4 className="card-title fw-bold">{name}</h4>
+          <p>uuid: {uuid}</p>
+          <p>Pages: {pages}</p>
           <p className="fw-bold">Price: {price}$</p>
         </div>
         <div className="card-footer">

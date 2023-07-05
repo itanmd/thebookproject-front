@@ -288,7 +288,7 @@ const AdminEditOrCreateBook = () => {
               </div>
             </div>
             <button className="btn btn-warning mt-4 w-50 d-block m-auto">
-              שלח
+              Send
             </button>
           </form>
         )}

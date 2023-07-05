@@ -47,13 +47,13 @@ const AdminLeads = () => {
 
         <div className="mt-4 overflow-auto">
           {data && (
-            <table className="table table-dark table-striped">
+            <table className="table table-light table-striped">
               <thead>
                 <tr>
                   <th scope="col">Name</th>
                   <th scope="col">Email</th>
                   <th scope="col">Phone</th>
-                  <th></th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
