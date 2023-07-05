@@ -27,7 +27,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container-fluid custom-nav-container">
             <Link className="navbar-brand" to="/home">
-              <h1 className="m-0">THE BOOK PROJECT</h1>
+              <h3 className="m-0">THE BOOK PROJECT</h3>
             </Link>
             <button
               className="navbar-toggler py-2"

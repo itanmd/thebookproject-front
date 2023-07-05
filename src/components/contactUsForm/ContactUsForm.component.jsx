@@ -157,10 +157,9 @@ const ContuctUsForm = () => {
             </div>
           </div>
         </div>
-        <button className="btn btn-outline-warning m-auto d-block w-50">
-          שלח
-        </button>
+        <button className="btn btn-warning m-auto d-block w-20">Send</button>
       </form>
+
       {error && (
         <div className="text-danger">
           One of the values you entered are wrong

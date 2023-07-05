@@ -78,18 +78,21 @@ const Book = () => {
       {data ? (
         <Fragment>
           <PageTitle title={data.name} />
-          <div className="container text-light product-container rounded my-3 p-5">
+          <div className="container text-dark product-container rounded my-3 p-5">
             <GoBackButton />
             <div className="row row-cols-1 row-cols-md-2">
-              <div className="col text-light">
+              <div className="col text-dark">
                 <div className="custom-product">
                   <div>
-                    <div>{data.description}</div>
+                    <div className="fs-5 mb-4">{data.description}</div>
                   </div>
-                  <div className="fw-bold"> Price: {data.price}$</div>
+                  <div className="fw-bold mb-1"> Price: {data.price}$</div>
+                  <div className="fw-bold mb-1"> Pages: {data.pages}</div>
+                  <div className="fw-bold"> Uuid: {data.uuid}</div>
+                  <div className="fw-bold"> Category: {data.category_name}</div>
                 </div>
               </div>
-              <div className="col">
+              <div className="col d-flex justify-content-center">
                 <img
                   src={`${process.env.REACT_APP_DOMAIN}/imgs/book/${data.image_link}`}
                   alt=""
@@ -98,12 +101,9 @@ const Book = () => {
               </div>
             </div>
             {!location.pathname.includes("admin") && (
-              <button
-                onClick={handleFavClick}
-                className="btn btn-outline-warning"
-              >
+              <button onClick={handleFavClick} className="btn btn-warning">
                 Favorites
-                <FontAwesomeIcon icon={faStar} className={`me-1 ${fav}`} />
+                <FontAwesomeIcon icon={faStar} className={`ms-3 me-1 ${fav}`} />
               </button>
             )}
           </div>

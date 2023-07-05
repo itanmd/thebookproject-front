@@ -12,7 +12,12 @@
   object-fit: cover;
   max-width: 200px;
   padding-top: 20px;
+  transition: transform 0.3s ease-in-out;
 }
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
 .card {
   display: flex;
   align-items: center;

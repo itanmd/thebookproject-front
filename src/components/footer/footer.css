@@ -1,8 +1,14 @@
 .active {
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
+  font-weight: 800;
 }
 footer .nav .nav-link {
-  color: white;
+  color: #202020bf;
+  text-transform: uppercase;
+}
+
+a {
+  color: black !important;
 }
 
 @media screen and (min-width: 990px) {

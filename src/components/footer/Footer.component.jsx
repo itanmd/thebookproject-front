@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <Fragment>
       {!location.pathname.includes("admin") && (
-        <footer className="container-fluid mt-4 py-5 bg-black text-light custom-footer">
+        <footer className="container-fluid mt-4 py-5 bg-light text-dark custom-footer">
           <div className="row row-cols-1 row-cols-lg-3 g-3">
             <div className="col">
               <ul className="nav flex-column pe-0">
@@ -60,38 +60,27 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col">
-              <div className="h3">שעות פתיחה</div>
-              <ul>
-                <li>
-                  <span className="ms-2 fw-bold">ראשון - חמישי:</span>{" "}
-                  10:00-22:00
-                </li>
-                <li>
-                  <span className="ms-2 fw-bold">שישי:</span> 10:00-15:00
-                </li>
-                <li>
-                  <span className="ms-2 fw-bold">שבת:</span> 20:00-24:00
-                </li>
-              </ul>
               <div className="mt-1">
-                <div className="h3">דרכים ליצירת קשר</div>
+                <div className="h3">Ways to contact us</div>
                 <ul>
                   <li>
-                    <a href="tel:+972586889499" target="_blank">
-                      באמצעות הטלפון 058-6889499
+                    <a href="tel:+972503322459" target="_blank">
+                      <FontAwesomeIcon icon="fa-sharp fa-solid fa-location-dot" />
+                      (+972)50-3322459{" "}
                     </a>
                   </li>
                   <li>
                     <a href="mailto:mosheduek.dev@gmail.com" target="_blank">
-                      במייל mosheduek.dev@gmail.com
+                      itan.dvir.eng@gmail.com{" "}
                     </a>
                   </li>
                 </ul>
               </div>
               <div className="mt-1">
-                <div className="h3">נווט אלינו</div>
-                <a href="https://goo.gl/maps/rU2ATcfGTf152o2V7" target="_blank">
-                  <FontAwesomeIcon icon={faLocationArrow} /> אשתאול 14 חולון
+                <div className="h3">Navigate to us</div>
+                <FontAwesomeIcon icon={faLocationArrow} />
+                <a href="https://goo.gl/maps/f1aTLfECtdWci8G39" target="_blank">
+                  Ramat-Gan, Klausner
                 </a>
               </div>
             </div>

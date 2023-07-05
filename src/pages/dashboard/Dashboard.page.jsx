@@ -1,6 +1,6 @@
 import "./dashboard.css";
 import { Fragment } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import AdminBooks from "../../components/adminBooks/AdminBooks.component";
 import AdminLeads from "../../components/adminLeads/AdminLeads.component";
 import AdminMessages from "../../components/adminMessages/AdminMessages.component";
@@ -41,46 +41,63 @@ const DashboardNavBar = () => {
 
   return (
     <Fragment>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/admin/dashboard/books">
-                Books
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/admin/dashboard/leads">
-                Leads
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/admin/dashboard/messages">
-                Messages{" "}
-                {amount && (
-                  <span className="bg-secondary p-1 rounded me-1 text-light">
-                    {amount}
-                  </span>
-                )}
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link"
-                to="/admin/dashboard/private-details"
-              >
-                Personal Information
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/">
-                HomePage
-              </NavLink>
-            </li>
-          </ul>
-          <button onClick={handleLogOut} className="btn btn-outline-danger">
-            <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div className="container-fluid custom-nav-container">
+          <button
+            className="navbar-toggler py-2"
+            id="navbar-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon nav-icon"></span>
           </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/admin/dashboard/books">
+                  Books
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/admin/dashboard/leads">
+                  Leads
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/admin/dashboard/messages">
+                  Messages{" "}
+                  {amount && (
+                    <span className="bg-secondary p-1 rounded me-1 text-light">
+                      {amount}
+                    </span>
+                  )}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/admin/dashboard/private-details"
+                >
+                  Personal Information
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
+                  HomePage
+                </NavLink>
+              </li>
+            </ul>
+            <button
+              onClick={handleLogOut}
+              className="btn btn-outline-danger"
+            >
+              <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout
+            </button>
+          </div>
         </div>
       </nav>
 
