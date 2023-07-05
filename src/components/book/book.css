@@ -1,15 +1,25 @@
 .card {
   backdrop-filter: blur(9px) saturate(200%) !important;
   -webkit-backdrop-filter: blur(9px) saturate(200%) !important;
-  background-color: rgba(0, 0, 0, 0.94) !important;
-  color: rgb(255, 255, 255) !important;
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  color: #121212fb !important;
   height: 100% !important;
-  box-shadow: 0 0 4px 0px white;
+  width: 22rem;
+  box-shadow: 0 0 2px 0px rgba(107, 107, 107, 0.513);
 }
-.card .row .col-md-4 {
+.card-img-top {
+  height: 100%;
+  object-fit: cover;
+  max-width: 200px;
+  padding-top: 20px;
+}
+.card {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.card-footer {
+  width: 100%;
 }
 .pointer {
   cursor: pointer;

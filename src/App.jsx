@@ -34,9 +34,9 @@ function App() {
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/book/:id" element={<Book />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route exact path="/About Us" element={<AboutUs />} />
-          <Route exact path="/Our Books" element={<OurBooksPage />} />
-          <Route exact path="/Contact Us" element={<ContactUs />} />
+          <Route exact path="/about-us" element={<AboutUs />} />
+          <Route exact path="/our-books" element={<OurBooksPage />} />
+          <Route exact path="/contact-us" element={<ContactUs />} />
           <Route path="/create-admin" element={<CreateAdmin />} />;
           <Route exact path="/admin" element={<Admin />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

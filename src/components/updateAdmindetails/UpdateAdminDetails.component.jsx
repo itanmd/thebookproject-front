@@ -44,9 +44,10 @@ const UpdateAdminDetails = () => {
           toast.success("Details were update successfully");
           afterUpdate(data.token);
         })
-        .catch(() => {
+        .catch((e) => {
           setLoading(false);
           toast.error("Something went wrong, please check you details");
+          console.log(e);
         });
     }
   };

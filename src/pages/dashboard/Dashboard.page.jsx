@@ -41,47 +41,50 @@ const DashboardNavBar = () => {
 
   return (
     <Fragment>
-      <div className="pt-4">
-        <ul className="nav nav-tabs">
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/admin/dashboard/books">
-              Books
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/admin/dashboard/leads">
-              Leads
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/admin/dashboard/messages">
-              Messages{" "}
-              {amount && (
-                <span className="bg-secondary p-1 rounded me-1 text-light">
-                  {amount}
-                </span>
-              )}
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/admin/dashboard/private-details">
-              Personal Information
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/">
-              homePage
-            </NavLink>
-          </li>
-          <button
-            onClick={handleLogOut}
-            className="btn btn-outline-danger me-auto ms-1 mb-1"
-          >
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/admin/dashboard/books">
+                Books
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/admin/dashboard/leads">
+                Leads
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/admin/dashboard/messages">
+                Messages{" "}
+                {amount && (
+                  <span className="bg-secondary p-1 rounded me-1 text-light">
+                    {amount}
+                  </span>
+                )}
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/admin/dashboard/private-details"
+              >
+                Personal Information
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">
+                HomePage
+              </NavLink>
+            </li>
+          </ul>
+          <button onClick={handleLogOut} className="btn btn-outline-danger">
             <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout
           </button>
-        </ul>
-      </div>
-      <div className="py-4">
+        </div>
+      </nav>
+
+      <div className="py-5">
         {location.pathname.includes("books") && <AdminBooks />}
         {location.pathname.includes("leads") && <AdminLeads />}
         {location.pathname.includes("messages") && (

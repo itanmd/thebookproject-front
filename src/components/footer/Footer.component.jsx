@@ -25,18 +25,18 @@ const Footer = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to={encodeURI("/About Us")}>
-                    About Us
+                  <NavLink className="nav-link" to={encodeURI("/about-us")}>
+                    about-us
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to={encodeURI("/Our Books")}>
-                    Our Books
+                    our-books
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to={encodeURI("/Contact Us")}>
-                    Contact Us
+                  <NavLink className="nav-link" to={encodeURI("/contact-us")}>
+                    contact-us
                   </NavLink>
                 </li>
                 {loggedIn ? (

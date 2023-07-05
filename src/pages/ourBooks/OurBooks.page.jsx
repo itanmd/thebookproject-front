@@ -22,7 +22,7 @@ const OurBooksPage = () => {
             <SortBy onSortBy={handleSortBy} />
           </div>
         </div>
-        <div className="row row-cols-2 row-cols-lg-3 g-3">
+        <div className="row row-cols-1 row-cols-lg-3 g-3">
           <OurBooks sortBy={sortBy} />
         </div>
       </div>

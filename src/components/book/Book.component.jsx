@@ -31,41 +31,29 @@ const Book = ({
   return (
     <Fragment>
       <div className="card">
-        <div className="row g-0">
-          <div className="col-md-4">
-            <img
-              src={`${process.env.REACT_APP_DOMAIN}/imgs/book/${image_link}`}
-              className="img-fluid shadow-filter responsive-round"
-              alt={name}
-            />
-          </div>
-          <div className="col-md-8">
-            <div className="card-body text-end">
-              <h5 className="card-title">{name}</h5>
-              <p className="card-text">{description}</p>
-              <p className="card-text text-start">
-                <small className="text-muted fw-bold">
-                  {price}
-                  <span>$</span>
-                </small>
-              </p>
-            </div>
-            <div className="card-footer text-start">
-              <button
-                onClick={handleClick}
-                className="btn btn-outline-warning d-inline text-white"
-              >
-                More details
-              </button>
-              <FontAwesomeIcon
-                icon={faStar}
-                className={`pointer  me-1 ${
-                  favorite ? "text-warning" : "text-secondary"
-                }`}
-                onClick={handleFavor}
-              />
-            </div>
-          </div>
+        <img
+          src={`${process.env.REACT_APP_DOMAIN}/imgs/book/${image_link}`}
+          className="card-img-top"
+          alt={name}
+        />
+        <div className="card-body text-center">
+          <h4 className="card-title">{name}</h4>
+          <p className="card-text text-center">
+            {price}
+            <span>$</span>
+          </p>
+        </div>
+        <div className="card-footer text-center">
+          <button onClick={handleClick} className="btn btn-outline-dark">
+            More details
+          </button>
+          <FontAwesomeIcon
+            icon={faStar}
+            className={`pointer  me-1 ${
+              favorite ? "text-warning" : "text-secondary"
+            }`}
+            onClick={handleFavor}
+          />
         </div>
       </div>
     </Fragment>

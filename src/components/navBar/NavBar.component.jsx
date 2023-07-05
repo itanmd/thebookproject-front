@@ -49,17 +49,17 @@ const NavBar = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to={encodeURI("/About Us")}>
+                  <NavLink className="nav-link" to={encodeURI("/about-us")}>
                     About Us
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to={encodeURI("/Our Books")}>
+                  <NavLink className="nav-link" to={encodeURI("/our-books")}>
                     Our Books
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to={encodeURI("/Contact Us")}>
+                  <NavLink className="nav-link" to={encodeURI("/contact-us")}>
                     Contact Us
                   </NavLink>
                 </li>

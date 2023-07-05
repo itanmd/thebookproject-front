@@ -64,7 +64,7 @@ const AdminMessages = ({ onMessageRead }) => {
       <div className="container">
         <h1 className="text-center">Messages</h1>
         <div className="mt-4 overflow-auto">
-          <table className="table table-dark table-striped">
+          <table className="table table-light table-striped">
             <thead>
               <tr>
                 <th scope="col">Name</th>

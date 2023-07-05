@@ -17,6 +17,12 @@ h6,
   font-family: "Assistant", sans-serif;
   letter-spacing: 0.1em;
 }
+
+p {
+  font-family: "Assistant", sans-serif;
+  font-size: 24px;
+  color: #121212ec;
+}
 .img-fluid {
   width: 100% !important;
 }
