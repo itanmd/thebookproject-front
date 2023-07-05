@@ -49,7 +49,7 @@ const Book = ({
           </button>
           <FontAwesomeIcon
             icon={faStar}
-            className={`pointer  ${
+            className={`pointer ms-2  ${
               favorite ? "text-warning" : "text-secondary"
             }`}
             onClick={handleFavor}

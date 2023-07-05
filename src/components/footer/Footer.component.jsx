@@ -30,7 +30,7 @@ const Footer = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to={encodeURI("/Our Books")}>
+                  <NavLink className="nav-link" to={encodeURI("/our-books")}>
                     our-books
                   </NavLink>
                 </li>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mt-1">
-                <div className="h3">Navigate to us</div>
+                <div className="h3">Office</div>
                 <FontAwesomeIcon icon={faLocationArrow} />
                 <a href="https://goo.gl/maps/f1aTLfECtdWci8G39" target="_blank">
                   Ramat-Gan, Klausner

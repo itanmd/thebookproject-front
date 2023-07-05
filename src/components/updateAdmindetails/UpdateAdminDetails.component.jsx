@@ -56,7 +56,7 @@ const UpdateAdminDetails = () => {
     <Fragment>
       <h1 className="my-3 text-center">Update personal information</h1>
       <form className="container" onSubmit={handleSubmit}>
-        <div className="row row-cols-1 row-cols-md-2">
+        <div className="row row-cols-1 row-cols-md-1">
           <div className="col">
             <div className="mb-3">
               <label htmlFor="exampleFormControlInput1" className="form-label">
