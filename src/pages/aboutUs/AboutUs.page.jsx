@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <Fragment>
       <PageTitle title="ABOUT US" />
-      <div className="my-3 fs-3 m-auto p-3 w-md-50">
+      <div className="my-3 fs-5 m-auto p-3 w-md-50">
         <p>
           At The Books Project, we have curated a diverse collection of books,
           carefully handpicked by our team of avid readers. These books span a

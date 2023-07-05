@@ -32,9 +32,9 @@ const AdminMessage = ({
         >
           X Cancel
         </button>
-        <div className="w-75 bg-black p-3">
-          <div className="card fs-4">
-            <div className="card-body">
+        <div className="w-80 bg-black p-2">
+          <div className="card fs-6">
+            <div className="card-body m-4">
               <h5 className="card-title h1">{name}</h5>
               <h6 className="card-subtitle mb-2 text-muted h3">{subject}</h6>
               <p className="card-text">{message}</p>

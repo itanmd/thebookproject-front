@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             <div className="col">
               <div className="mt-1">
-                <div className="h3">Ways to contact us</div>
+                <div className="h3">Contact Information</div>
                 <ul>
                   <li>
                     <a href="tel:+972503322459" target="_blank">
