@@ -18,7 +18,6 @@ const AdminEditOrCreateBook = () => {
       axios
         .get(`/books/${params.id}`)
         .then(({ data }) => {
-          console.log(data);
           setAxiosData(data[0]);
           setData({
             name: data[0].name,
@@ -69,7 +68,6 @@ const AdminEditOrCreateBook = () => {
       abortEarly: false,
     });
     if (validatedValue.error) {
-      console.log(validatedValue);
       toast.error("One of the values is invalid");
     } else {
       if (!params.hasOwnProperty("id") && !axiosData.image_link) {

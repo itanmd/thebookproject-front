@@ -47,7 +47,6 @@ const UpdateAdminDetails = () => {
         .catch((e) => {
           setLoading(false);
           toast.error("Something went wrong, please check you details");
-          console.log(e);
         });
     }
   };
