@@ -14,11 +14,11 @@ const Book = ({
   idbooks,
   onSetFavor,
   onUnsetFavor,
-  onOpenProduct,
+  onOpenBook,
   favorite,
 }) => {
   const handleClick = () => {
-    onOpenProduct(idbooks);
+    onOpenBook(idbooks);
   };
 
   const handleFavor = () => {

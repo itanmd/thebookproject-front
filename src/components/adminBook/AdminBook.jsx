@@ -15,6 +15,7 @@ const AdminBook = ({
 }) => {
   const handleClick = (ev) => {
     onOpenBook(idbooks);
+    
   };
   const handleDeleteClick = (ev) => {
     ev.stopPropagation();

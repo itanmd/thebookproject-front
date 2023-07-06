@@ -32,14 +32,7 @@ const productSchema = {
   ...categoryIdRole,
 };
 
-// const updatePriceSchema = Joi.object({
-//     ...priceRole,
-//     // ...idBookRole
-// })
 
-// const deleteOrGetSchema =Joi.object({
-//     // ...idBookRole
-// })
 
 
 export default productSchema;

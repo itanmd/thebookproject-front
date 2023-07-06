@@ -18,7 +18,7 @@ const AdminEditOrCreateBook = () => {
       axios
         .get(`/books/${params.id}`)
         .then(({ data }) => {
-          console.log(data)
+          console.log(data);
           setAxiosData(data[0]);
           setData({
             name: data[0].name,
@@ -27,7 +27,6 @@ const AdminEditOrCreateBook = () => {
             uuid: data[0].uuid,
             pages: data[0].pages,
             categoryId: data[0].categoryId,
-
           });
         })
         .catch((e) => {
@@ -70,7 +69,7 @@ const AdminEditOrCreateBook = () => {
       abortEarly: false,
     });
     if (validatedValue.error) {
-      console.log(validatedValue)
+      console.log(validatedValue);
       toast.error("One of the values is invalid");
     } else {
       if (!params.hasOwnProperty("id") && !axiosData.image_link) {
@@ -89,7 +88,7 @@ const AdminEditOrCreateBook = () => {
           axios
             .put(`/books/${params.id}`, formData)
             .then(() => {
-              toast.done("Uploaded");
+              toast.success("Uploaded");
               window.history.back();
             })
             .catch(() => {
@@ -99,7 +98,7 @@ const AdminEditOrCreateBook = () => {
           axios
             .post("/books", formData)
             .then(() => {
-              toast.done("Uploaded");
+              toast.success("Uploaded");
               window.history.back();
             })
             .catch(() => {
@@ -185,7 +184,7 @@ const AdminEditOrCreateBook = () => {
                   type="text"
                   className="form-control price"
                   id="exampleFormControlInput1"
-                  placeholder="20$"
+                  placeholder="20"
                   value={data.price}
                   onChange={handlePriceChange}
                 ></input>
@@ -244,8 +243,8 @@ const AdminEditOrCreateBook = () => {
                     Number of pages should be greater than 0
                   </span>
                 )}{" "}
-                {data.hasOwnProperty("price") && data.pages > 5000 && (
-                  <span className="text-danger">Max pages is 5000</span>
+                {data.hasOwnProperty("pages") && data.pages > 2000 && (
+                  <span className="text-danger">Max pages is 2000</span>
                 )}
               </div>
               <div className="col">
@@ -263,17 +262,16 @@ const AdminEditOrCreateBook = () => {
                   value={data.categoryId}
                   onChange={handleCategoryIdChange}
                 ></input>
-                {data.hasOwnProperty("categoryId") && data.categoryId < 0 && (
+                {data.hasOwnProperty("categoryId") && data.categoryId < 1 && (
                   <span className="text-danger">
                     Category Id should be greater than 0
                   </span>
                 )}{" "}
-                {data.hasOwnProperty("categoryId") &&
-                  data.categoryId > 5000 && (
-                    <span className="text-danger">
-                      Category Id is between 0 to 5000
-                    </span>
-                  )}
+                {data.hasOwnProperty("categoryId") && data.categoryId > 255 && (
+                  <span className="text-danger">
+                    Category Id is between 0 to 5000
+                  </span>
+                )}
               </div>
               <div className="col">
                 <label htmlFor="formFile" className="form-label">

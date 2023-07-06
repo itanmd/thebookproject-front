@@ -12,7 +12,7 @@ const useAfterLogin = (token) => {
     dispatch(authActions.login());
     dispatch(authActions.updateUserData(jwt_decode(token)));
     if (location === "/admin") {
-      navigate("/admin/dashboard/products");
+      navigate("/admin/dashboard/books");
     }
   };
 };

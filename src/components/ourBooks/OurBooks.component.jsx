@@ -138,7 +138,7 @@ const OurBooks = ({ sortBy }) => {
           <div className="col" key={idx}>
             <Book
               {...product}
-              onOpenProduct={openBook}
+              onOpenBook={openBook}
               onSetFavor={setFavor}
               onUnsetFavor={unsetFavor}
             />

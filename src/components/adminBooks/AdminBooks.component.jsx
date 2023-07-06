@@ -40,7 +40,7 @@ const AdminBooks = () => {
     axios
       .delete(`/books/${id}`)
       .then(() => {
-        toast.done("Book deleted");
+        toast.success("Book deleted");
         let d = [...data];
         d = d.filter((prod) => prod.idbooks !== id);
         setData(d);
@@ -71,7 +71,7 @@ const AdminBooks = () => {
                       {...prod}
                       onDelete={deleteCardConfirmation}
                       onEdit={editCard}
-                      onOpenProduct={openBook}
+                      onOpenBook={openBook}
                     />
                   </div>
                 ))}

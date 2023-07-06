@@ -48,7 +48,7 @@ const Favorites = () => {
                   {...prod}
                   favorite={true}
                   onUnsetFavor={handleRemove}
-                  onOpenProduct={openBook}
+                  onOpenBook={openBook}
                 />
               </div>
             ))}

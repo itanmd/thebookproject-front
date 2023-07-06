@@ -30,7 +30,7 @@ const AdminLeads = () => {
       .delete(`/leads/${id}`)
       .then(() => {
         setConfirmDelete(null);
-        toast.done("Lead deleted");
+        toast.success("Lead deleted");
         let d = [...data];
         d = d.filter((lead) => lead.idleads !== id);
         setData(d);
