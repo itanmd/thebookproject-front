@@ -25,7 +25,7 @@ const AdminEditOrCreateBook = () => {
             price: data[0].price,
             uuid: data[0].uuid,
             pages: data[0].pages,
-            categoryId: data[0].categoryId,
+            categoryId:data[0].idcategories
           });
         })
         .catch((e) => {
@@ -78,7 +78,7 @@ const AdminEditOrCreateBook = () => {
         formData.append("description", data.description);
         formData.append("uuid", data.uuid);
         formData.append("pages", data.pages);
-        formData.append("categoryId", data.categoryId);
+        if (data.categoryId) formData.append("categoryId", data.categoryId);
         formData.append("price", data.price);
         formData.append("prudImg", axiosData.image_link);
 
@@ -86,7 +86,7 @@ const AdminEditOrCreateBook = () => {
           axios
             .put(`/books/${params.id}`, formData)
             .then(() => {
-              toast.success("Uploaded");
+              toast.success("Updated");
               window.history.back();
             })
             .catch(() => {
@@ -245,6 +245,7 @@ const AdminEditOrCreateBook = () => {
                   <span className="text-danger">Max pages is 2000</span>
                 )}
               </div>
+
               <div className="col">
                 <label
                   htmlFor="exampleFormControlInput1"
@@ -271,6 +272,7 @@ const AdminEditOrCreateBook = () => {
                   </span>
                 )}
               </div>
+
               <div className="col">
                 <label htmlFor="formFile" className="form-label">
                   Images

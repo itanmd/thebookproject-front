@@ -1,10 +1,9 @@
 import "./footer.css";
-import { faLocationArrow, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faLocationArrow, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
-import GoogleLogIn from "../googleLogIn/GoogleLogIn.component";
 import ContactUsForm from "../contactUsForm/ContactUsForm.component";
 
 const Footer = () => {
@@ -39,15 +38,11 @@ const Footer = () => {
                     contact-us
                   </NavLink>
                 </li>
-                {loggedIn ? (
+                {loggedIn && (
                   <li className="nav-item">
                     <NavLink className="nav-link" to={encodeURI("/Favorites")}>
                       Favorites
                     </NavLink>
-                  </li>
-                ) : (
-                  <li className="nav-item">
-                    <GoogleLogIn />
                   </li>
                 )}
                 {adminLoggedIn && (
@@ -62,10 +57,10 @@ const Footer = () => {
             <div className="col">
               <div className="mt-1">
                 <div className="h3">Contact Information</div>
-                <ul>
+                <ul className="pe-0">
                   <li>
                     <a href="tel:+972503322459" target="_blank">
-                      <FontAwesomeIcon icon="fa-sharp fa-solid fa-location-dot" />
+                      <FontAwesomeIcon icon={faPhone} />
                       (+972)50-3322459{" "}
                     </a>
                   </li>

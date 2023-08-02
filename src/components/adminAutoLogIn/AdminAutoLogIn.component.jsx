@@ -5,6 +5,7 @@ import useAfterLogin from "../../hooks/useAfterLogin";
 const AdminAutoLogIn = () => {
   const afterLogin = useAfterLogin();
   useEffect(() => {
+    if(localStorage.getItem("admin-token")){
     axios
       .post("/admin/login-by-token")
       .then(({ data }) => {
@@ -13,6 +14,7 @@ const AdminAutoLogIn = () => {
       .catch(() => {
         localStorage.removeItem("admin-token");
       });
+    }
   }, []);
 
   return <Fragment></Fragment>;
